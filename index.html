@@ -63,10 +63,9 @@
       <a-assets timeout="1000">
         <!-- Declare assets here. These are things like images or 3D models. -->    
         
-        <!-- Example of how to declare a 3D model asset. -->
-        <!--<a-asset-item id="3DModel-obj" src="3Dmodel.obj"></a-asset-item preload="auto">-->
-        <!-- Example of how to declare a skin for a 3D model asset. -->
-        <!--<a-asset-item id="3DModel-mtl" src="3DModel.mtl"></a-asset-item>-->
+         
+    	<video id="iPhone7(720p)-Flat" autoplay loop="true" src="iPhone7(720p)-Flat.mp4"></video>
+  
       
       </a-assets>
 
@@ -75,31 +74,33 @@
 
         <!-- Add your augmented reality items here -->
 
-	      <video id="iPhone7(720p)-Flat" autoplay loop="true" src="iPhone7(720p)-Flat.mp4"></video>
-              <!-- Using the asset management system. -->
-              <a-video src="#iPhone7(720p)-Flat" width="16" height="9" position="0 -90 0"></a-video>
-	   <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
-              <a-video src="iPhone7(720p)-Flat.mp4"></a-video>
-         
+        <!-- example of basic text in 3D -->
+        <!-- see: https://github.com/aframevr/aframe/blob/master/docs/components/text.md -->
+        <!--<a-entity id="basicText" position='0 0 0' scale='1 1 1' color='red' text='value: Hello World;'></a-entity>-->
+
+        <!-- example of a basic plane. -->
+        <!-- see: https://aframe.io/docs/0.8.0 -->
+        <!--<a-plane color="blue" height="1" width="1" rotation="-90 0 0"></a-plane>-->
 
         <!-- example of text fit onto a plane -->
-        
+        <!--
         <a-plane
         id = "helloWorldPlane"
         geometry="primitive: plane; width: 1; height: 1; height: auto"
-        material="opacity: 0.5; color: blue;"
+        material="opacity: 0.5; color: white;"
         position='0 0.25 3'>
           <a-entity id="planeText" scale='2 2 2' text="value: Hello World;" align-"center"></a-entity>
         </a-plane>
-        
-
+        -->
+	<a-video src="#iPhone7(720p)-Flat" width="16" height="9" position="0 0 -20"></a-video>
+ 	<a-video src="airbending.mp4"></a-video>
         <!-- Basic Box -->             
         <!-- see: https://aframe.io/docs/0.8.0 -->
-        <!--a-box id="myBox" rotation="0 0 0" position='0 0.5 0' depth="1" height="1" width="1" material='opacity: 0.5; side:double; color:blue;'></a-box>
+        <a-box id="myBox" rotation="0 0 0" position='0 0.5 0' depth="1" height="1" width="1" material='opacity: 0.5; side:double; color:blue;'></a-box>
         
         <!-- Basic Sphere --> 
         <!-- see: https://aframe.io/docs/0.8.0/primitives/a-sphere.html -->
-        <!--a-sphere id="mySphere" position='0 0 0' color="red" radius="0.05"></a-sphere>-->
+        <!--<a-sphere id="mySphere" position='0 0 0' color="yellow" radius="0.05"></a-sphere>-->
 
         <!-- 3D Model example -->
         <!-- see: https://aframe.io/docs/0.8.0/primitives/a-obj-model.html -->
