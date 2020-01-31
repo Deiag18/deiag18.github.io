@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes"></meta>
     </head>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
@@ -10,13 +11,15 @@
         AFRAME.registerComponent('play-vid', {
             init: function() {
                 var vrScene = document.querySelector('a-scene');
-                var vrVideo = vrScene.querySelector('a-plane');
-                vrVideo.addEventListener('click',function(event){
-                    var video = document.querySelector('#duane-vid');
-                    video.play();
+                var vrVideo = vrScene.querySelector('#duane-vid');
+                vrVideo.pause();
+                vrVideo.addEventListener('start-video',function(event){
+                    vrVideo.play();
                 });
-                vrVideo.emit('click');
+                this.vrVideo.setAttribute('webkit-playsinline', true);
+                vrVideo.emit('start-video');
             }
+            
        }); 
      </script>
     <body style='margin : 0px; overflow: hidden;'>
@@ -24,7 +27,7 @@
        <a-scene play-vid embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
-            <video id="duane-vid" src="duane.mp4"></video>
+            <video id="duane-vid" src="duane.mp4" loop webkit-playsinline ></video>
         </a-assets>
 
         <a-plane material="src:#duane-vid" position="0 -3 -50" width="16" height="9" rotation="0 0 0"></a-plane>
