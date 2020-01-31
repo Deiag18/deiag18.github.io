@@ -17,7 +17,6 @@
                     duane.play();
                 });
 //                 duane.pause();
-                duane.setAttribute('webkit-playsinline', true);
                 vrVideo.emit('click');
             }
             
@@ -28,7 +27,7 @@
        <a-scene play-vid embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
-            <video id="duane-vid" src="duane.mp4" autoplay loop webkit-playsinline ></video>
+            <video id="duane-vid" src="duane.mp4" autoplay loop webkit-playsinline="true" ></video>
         </a-assets>
 
         <a-plane material="src:#duane-vid" position="0 -3 -50" width="16" height="9" rotation="0 0 0"></a-plane>
