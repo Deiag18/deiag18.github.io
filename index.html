@@ -25,7 +25,7 @@
     </script>
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-      <a-scene play embedded vr-mode-ui="enabled: true enterVRButton: #vrButton" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+<!--       <a-scene play embedded vr-mode-ui="enabled: true enterVRButton: #vrButton" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
             <video id="duane-vid" autoplay loop="true" src="duane.mp4"></video>
@@ -34,18 +34,18 @@
         <a-video src="#duane-vid" position="0 -10 -50" width="16" height="9" rotation="0 180 0"></a-video>
 
         <a-entity camera></a-entity>
-        </a-scene>
-<!--         <a-scene> -->
-<!--       <a-assets> -->
-<!--          <a-asset-item id="randImg" src="2https://cdn.glitch.com/0715fe44-a38f-4f54-9b2a-26649ae59cad%2F20150830_150909.jpg?v=1580420391281"></a-asset-item> -->
-<!--         <video id="randImg" src="https://cdn.glitch.com/0715fe44-a38f-4f54-9b2a-26649ae59cad%2FBehaviorDetail.mp4?v=1580422801286"></video> -->
-<!--       </a-assets> -->
-<!--     <a-image src="HIRO.jpg" position="0 0 -20" rotation="0 180 180"></a-image> -->
-<!--       <a-video src="#randImg" width="5" height="3" position="0 0 -10"></a-video> -->
+        </a-scene> -->
+         <a-scene> 
+       <a-assets> 
+          <a-asset-item id="randImg" src="2https://cdn.glitch.com/0715fe44-a38f-4f54-9b2a-26649ae59cad%2F20150830_150909.jpg?v=1580420391281"></a-asset-item> 
+         <video id="randImg" src="https://cdn.glitch.com/0715fe44-a38f-4f54-9b2a-26649ae59cad%2FBehaviorDetail.mp4?v=1580422801286"></video> 
+       </a-assets>
+     <a-image src="HIRO.jpg" position="0 0 -20" rotation="0 180 180"></a-image> 
+       <a-video src="#randImg" width="5" height="3" position="0 0 -10"></a-video> 
     
-<!--       <a-video src="#randImg"></a-video> -->
+       <a-video src="#randImg"></a-video> 
              
-<!--     <a-entity camera></a-entity> -->
-<!--     </a-scene> -->
+     <a-entity camera></a-entity> 
+     </a-scene> 
     </body>
 </html>
