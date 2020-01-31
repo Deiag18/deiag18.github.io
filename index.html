@@ -13,7 +13,6 @@
                 var vrScene = document.querySelector('a-scene');
                 var vrVideo = vrScene.querySelector('a-plane');
                 var duane = vrScene.querySelector('#duane-vid');
-                duane.pause();
                 vrVideo.addEventListener('click',function(event){
                     duane.play();
                 });
@@ -26,11 +25,11 @@
        <a-scene play-vid embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
-            <video id="duane-vid" src="duane.mp4" autoplay loop webkit-playsinline="true" ></video>
+            <video id="duane-vid" src="duane.mp4" autoplay loop webkit-playsinline></video>
         </a-assets>
            
         <a-entity camera>
-           <a-plane material="src:#duane-vid" position="0 -3 -50" width="16" height="9" rotation="0 0 0"></a-plane>
+           <a-plane material="src:#duane-vid" position="0 -3 -40" width="16" height="9"></a-plane>
         </a-entity>
            
         </a-scene>
