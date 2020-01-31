@@ -8,16 +8,23 @@
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
     <body style='margin : 0px; overflow: hidden;'>
+        AFRAME.registerComponent('play', {
+                init: function() {
+                    var VRButton = document.querySelector('.a-enter-vr-button');
+                    VRButton.addEventListener('click', function(event) {
+                        var video = document.querySelector('start-video');
+                        video.play();
+                    });
+                }
+        });
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
       <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
             <video id="duane-vid" autoplay loop="true" src="duane.mp4"></video>
         </a-assets>
-
-<!--         <a-marker type='barcode' value='7'> -->
-            <a-video src="#duane-vid" position="0 -5 -30" width="16" height="9" rotation="180 0 0"></a-video>
-<!--         </a-marker> -->
+        
+        <a-video id="start-video" src="#duane-vid" position="0 -5 -30" width="16" height="9" rotation="180 0 0"></a-video>
 
         <a-entity camera></a-entity>
         </a-scene>
