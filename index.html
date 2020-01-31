@@ -13,10 +13,10 @@
                 var vrScene = document.querySelector('a-scene');
                 var vrVideo = vrScene.querySelector('a-plane');
                 var duane = vrVideo.querySelector('#duane-vid');
-                duane.pause();
                 vrVideo.addEventListener('click',function(event){
                     duane.play();
                 });
+//                 duane.pause();
                 duane.setAttribute('webkit-playsinline', true);
                 vrVideo.emit('click');
             }
