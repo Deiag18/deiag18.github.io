@@ -6,9 +6,9 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script> 
-       AFRAME.registerComponent('play', {
-            init: function() {
+<!--      <script> -->
+<!-- //        AFRAME.registerComponent('play', {
+//             init: function() {
 //                 var VRScene = document.querySelector('a-scene');
 //                 var duaneVid = VRScene.querySelector('a-video');
 //                 duaneVid.addEventListener('start', function(event) {
@@ -20,9 +20,9 @@
 //                     var video = document.querySelector('video');
 //                     video.play();
 //                 });
-            }
-       }); 
-    </script>
+//             }
+//        }); 
+//     </script> -->
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
 <!--       <a-scene play embedded vr-mode-ui="enabled: true enterVRButton: #vrButton" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
@@ -37,14 +37,10 @@
         </a-scene> -->
          <a-scene> 
        <a-assets> 
-          <a-asset-item id="randImg" src="2https://cdn.glitch.com/0715fe44-a38f-4f54-9b2a-26649ae59cad%2F20150830_150909.jpg?v=1580420391281"></a-asset-item> 
-         <video id="randImg" src="https://cdn.glitch.com/0715fe44-a38f-4f54-9b2a-26649ae59cad%2FBehaviorDetail.mp4?v=1580422801286"></video> 
+          <a id="randImg" href="HIRO.jpg"></a> 
        </a-assets>
      <a-image src="HIRO.jpg" position="0 0 -20" rotation="0 180 180"></a-image> 
-       <a-video src="#randImg" width="5" height="3" position="0 0 -10"></a-video> 
     
-       <a-video src="#randImg"></a-video> 
-             
      <a-entity camera></a-entity> 
      </a-scene> 
     </body>
