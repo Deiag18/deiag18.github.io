@@ -10,7 +10,7 @@
        AFRAME.registerComponent('play', {
             init: function() {
                 var VRScene = document.querySelector('a-scene');
-                var duaneVid = VRScene.querySelector('video');
+                var duaneVid = VRScene.querySelector('a-video');
                 duaneVid.addEventListener('start', function(event) {
                     duaneVid.play();
                 });
