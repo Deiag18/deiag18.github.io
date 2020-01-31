@@ -17,7 +17,6 @@
                 vrVideo.addEventListener('click',function(event){
                     duane.play();
                 });
-                vrVideo.emit('click');
             }
             
        }); 
@@ -29,10 +28,11 @@
         <a-assets>
             <video id="duane-vid" src="duane.mp4" autoplay loop webkit-playsinline="true" ></video>
         </a-assets>
-
-        <a-plane material="src:#duane-vid" position="0 -3 -50" width="16" height="9" rotation="0 0 0"></a-plane>
-
-        <a-entity camera></a-entity>
+           
+        <a-entity camera>
+           <a-plane material="src:#duane-vid" position="0 -3 -50" width="16" height="9" rotation="0 0 0"></a-plane>
+        </a-entity>
+           
         </a-scene>
     </body>
 </html>
